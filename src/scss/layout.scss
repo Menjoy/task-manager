@@ -1,0 +1,44 @@
+.input-container {
+  position: relative;
+  height: 27px;
+}
+
+.add-new {
+  outline: none;
+  padding: 3px;
+  height: 20px;
+  width: 200px;
+  border: none;
+  border-bottom: 1px solid $list-hover-bg-color;
+  margin-right: 10px;
+}
+
+.add-new-btn {
+  position: relative;
+  top: 7px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: none;
+  background: $wait-color;
+  cursor: pointer;
+    
+  &:focus {
+    outline: none;
+  }
+
+  &:before, &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 12px;
+    top: 10px;
+    left: 5px;
+    background: white;  
+  }
+
+  &:before {
+    transform: rotate(90deg);
+  }
+}

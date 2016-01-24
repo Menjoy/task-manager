@@ -1,0 +1,11 @@
+// Base
+@import 'vars.scss';
+
+// Components
+@import 'list.scss';
+@import 'layout.scss';
+
+body {
+    width: 750px;
+    margin: 25px auto;
+}

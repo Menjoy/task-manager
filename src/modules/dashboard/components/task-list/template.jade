@@ -1,0 +1,30 @@
+.task-list
+    .list-header(
+        data-ng-class="'list-header__' + listType"
+    )
+        span.list-title(
+            data-ng-bind="listLabel"
+        )
+    ul(
+        data-ng-repeat="task in list track by $index"
+    )
+        li.task-item
+            p(
+                data-ng-bind="task.text"
+            )
+            .actions
+                button.task-move-btn.task-move-btn__wait(
+                    data-ng-class="{'active': listType === 'wait'}"
+                    data-ng-click="move(task, $index, 'wait');"
+                )
+                button.task-move-btn.task-move-btn__active(
+                    data-ng-class="{'active': listType === 'active'}"
+                    data-ng-click="move(task, $index, 'active');"
+                )
+                button.task-move-btn.task-move-btn__completed(
+                    data-ng-class="{'active': listType === 'completed'}"
+                    data-ng-click="move(task, $index, 'completed');"
+                )
+                button.task-move-btn.task-move-btn__remove(
+                    data-ng-click="remove(task, $index);"
+                )
