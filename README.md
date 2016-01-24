@@ -1,5 +1,7 @@
-npm install
-bower install
+## Install
+* npm install
+* bower install
 
-gulp
-gulp server
+## Run
+* gulp
+* gulp server
