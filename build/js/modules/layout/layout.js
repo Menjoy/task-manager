@@ -3,6 +3,7 @@
 (function() {
     'use strict';
 
+    config.$inject = ["$stateProvider"];
     angular
         .module('tManager.layout', [])
         .config(config);
@@ -14,9 +15,9 @@
                 abstract: true,
                 views: {
                     '@': {
-                        templateUrl: 'build/modules/layout/layout.html'
+                        templateUrl: 'modules'
                     }
                 }
-            });
+            })
     }
 })();
